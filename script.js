@@ -6,5 +6,18 @@ const searchInput = document.getElementById('search-input');
 
 
 
+async function fetchCapivaras() {
+    try {
+        const response = await fetch(API_URL);
+        if (!response.ok) {
+            throw new Error('Erro ao buscar capivaras');
+        }
+        const capivaras = await response.json();
+        displayCapivaras(capivaras);
+    } catch (error) {
+        console.error('Erro ao buscar capivaras:', error);
+    }
+}
 
 
+fetchCapivaras();
