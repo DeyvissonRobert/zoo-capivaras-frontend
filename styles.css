@@ -146,6 +146,14 @@ button.delete-btn {
     overflow-y: auto; 
 }
 
+.modal-content h2 {
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -155,18 +163,18 @@ button.delete-btn {
     color: #333;
 }
 
-form {
+#add-capivara-form {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 4px; 
 }
 
-label {
+#add-capivara-form label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input, textarea {
+#add-capivara-form input, textarea {
     padding: 10px;
     width: 100%;
     border: 1px solid #ccc;
@@ -179,7 +187,8 @@ textarea {
     resize: none;
 }
 
-button {
+#add-capivara-form button {
+    margin-top: 5px;
     padding: 10px;
     background-color: #4caf50;
     color: #000;
@@ -188,12 +197,21 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s;
+
+    &:hover {
+        background-color: #45a049;
+    }
 }
 
-button:hover {
-    background-color: #45a049;
-}
+
 
 .close-button:hover {
     color: red;
+}
+
+#capivara-id {
+    position: absolute;
+    background-color: #c2cecf;
+    border-radius: 10px;
+    padding: 1px;
 }

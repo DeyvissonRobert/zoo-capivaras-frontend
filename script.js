@@ -28,18 +28,21 @@ function displayCapivaras(capivaras) {
         capivaraItem.classList.add('capivara-item');
 
         capivaraItem.innerHTML = `
+                <span id="capivara-id"><strong>ID:</strong> ${capivara.id}</span>
             <div class="capivara-info">
-                <strong>ID:</strong> ${capivara.id} <br>
-                <strong>Nome:</strong> ${capivara.nome} <br>
-                <strong>Idade:</strong> ${capivara.idade} anos <br>
-                <strong>Peso:</strong> ${capivara.peso} kg <br>
-                <strong>Habitat:</strong> ${capivara.habitat}
-                <div class="capivara-actions">
-                    <button class="edit-btn" onclick="editCapivara(${capivara.id})"><span class="material-symbols-outlined">edit</span></button>
-                    <button class="delete-btn" onclick="deleteCapivara(${capivara.id})"><span class="material-symbols-outlined">delete_forever</span></button>
-                </div>
+                <span><strong>Nome:</strong> ${capivara.nome}</span>
+                <span><strong>Idade:</strong> ${capivara.idade} anos</span>
+                <span><strong>Peso:</strong> ${capivara.peso} kg</span>
+                <span><strong>Status de Saúde:</strong> ${capivara.saude}</span>
+                <span><strong>Habitat:</strong> ${capivara.habitat}</span>
+                <span><strong>Comportamento:</strong> ${capivara.comportamento}</span>
+                ${capivara.dieta ? `<span><strong>Dieta:</strong> ${capivara.dieta}</span>` : ''}
+                ${capivara.observacoes ? `<span><strong>Observações:</strong> ${capivara.observacoes}</span>` : ''}
+                    <div class="capivara-actions">
+                        <button class="edit-btn" onclick="editCapivara(${capivara.id})"><span class="material-symbols-outlined">edit</span></button>
+                        <button class="delete-btn" onclick="deleteCapivara(${capivara.id})"><span class="material-symbols-outlined">delete_forever</span></button>
+                    </div>
             </div>
-            
         `;
 
         capivaraList.appendChild(capivaraItem);
