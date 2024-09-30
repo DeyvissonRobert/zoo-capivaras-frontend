@@ -46,4 +46,22 @@ function displayCapivaras(capivaras) {
     });
 }
 
+document.getElementById('search-input').addEventListener('input', filterCapivaras);
+
+function filterCapivaras() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const capivaraItems = document.querySelectorAll('.capivara-item');
+
+    capivaraItems.forEach(item => {
+        const itemText = item.textContent.toLowerCase();
+
+        if (itemText.includes(searchTerm)) {
+            item.style.display = 'flex'; 
+        } else {
+            item.style.display = 'none'; 
+        }
+    });
+}
+
+
 fetchCapivaras();
