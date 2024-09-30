@@ -56,11 +56,25 @@ function filterCapivaras() {
         const itemText = item.textContent.toLowerCase();
 
         if (itemText.includes(searchTerm)) {
-            item.style.display = 'flex'; 
+            item.style.display = 'flex';
         } else {
-            item.style.display = 'none'; 
+            item.style.display = 'none';
         }
     });
+}
+
+async function deleteCapivara(id) {
+    const confirmed = confirm('Tem certeza que deseja deletar esta capivara?');
+    if (confirmed) {
+        try {
+            await fetch(`${API_URL}/${id}`, {
+                method: 'DELETE'
+            });
+            fetchCapivaras();
+        } catch (error) {
+            console.error('Erro ao deletar capivara:', error);
+        }
+    }
 }
 
 
