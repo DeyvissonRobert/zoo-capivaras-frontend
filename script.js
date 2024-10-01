@@ -5,6 +5,7 @@ const searchInput = document.getElementById('search-input');
 const modal = document.getElementById('add-capivara-modal');
 const addBtn = document.getElementById('add-btn');
 const cancelBtn = document.querySelector('.close-button');
+const addCapivaraForm = document.getElementById('add-capivara-form');
 
 
 
@@ -82,6 +83,45 @@ async function deleteCapivara(id) {
         }
     }
 }
+
+addCapivaraForm.addEventListener('submit', async function (e) {
+    e.preventDefault(); 
+
+    const nome = document.getElementById('nome').value;
+    const idade = document.getElementById('idade').value;
+    const peso = document.getElementById('peso').value;
+    const saude = document.getElementById('saude').value;
+    const habitat = document.getElementById('habitat').value;
+    const comportamento = document.getElementById('comportamento').value;
+    const dieta = document.getElementById('dieta').value || null; 
+    const observacoes = document.getElementById('observacoes').value || null; 
+
+    if (nome && idade && peso && saude && habitat && comportamento) {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nome,
+                idade: parseInt(idade),
+                peso: parseFloat(peso),
+                saude,
+                habitat,
+                comportamento,
+                dieta,
+                observacoes
+            })
+        });
+
+        if (response.ok) {
+            fetchCapivaras(); 
+            closeModal(); 
+        } else {
+            alert('Erro ao adicionar capivara!');
+        }
+    } else {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+    }
+});
 
 function openModal() {
     modal.style.display = 'block'; 
