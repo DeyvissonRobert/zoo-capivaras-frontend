@@ -79,7 +79,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1000px;
     justify-content: space-around;
 }
 
@@ -91,6 +91,7 @@ button:hover {
     flex: 1 1 n;
     display: flex;
     justify-content: space-between;
+    max-width: 500px;
 }
 
 .capivara-info {
@@ -108,10 +109,6 @@ button:hover {
     margin: 5px;
     padding: 5px;
     font-size: 10px;
-}
-
-button.edit-btn {
-    background-color: #FFC107;
 }
 
 button.delete-btn {
@@ -203,15 +200,13 @@ textarea {
     }
 }
 
-
-
 .close-button:hover {
     color: red;
 }
 
 #capivara-id {
     position: absolute;
-    background-color: #c2cecf;
+    background-color: #b2ebf25d;
     border-radius: 10px;
     padding: 1px;
 }
