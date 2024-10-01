@@ -2,6 +2,9 @@ const API_URL = 'http://localhost:3000/capivaras';
 
 const capivaraList = document.getElementById('capivara-list');
 const searchInput = document.getElementById('search-input');
+const modal = document.getElementById('add-capivara-modal');
+const addBtn = document.getElementById('add-btn');
+const cancelBtn = document.querySelector('.close-button');
 
 
 
@@ -80,5 +83,22 @@ async function deleteCapivara(id) {
     }
 }
 
+function openModal() {
+    modal.style.display = 'block'; 
+}
+
+function closeModal() {
+    modal.style.display = 'none'; 
+}
+
+addBtn.addEventListener('click', openModal);
+
+cancelBtn.addEventListener('click', closeModal);
+
+window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none'; 
+    }
+});
 
 fetchCapivaras();
