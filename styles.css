@@ -88,6 +88,7 @@ button:hover {
 #capivara-list {
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
     gap: 20px;
     max-width: 1000px;
     justify-content: space-around;
@@ -101,7 +102,7 @@ button:hover {
     flex: 1 1 n;
     display: flex;
     justify-content: space-between;
-    max-width: 500px;
+    max-width: 300px;
 }
 
 .capivara-info {
@@ -109,9 +110,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 250px;
-    max-width: 600px;
+    min-width: 200px;
+    max-width: 300px;
     word-break: break-all;
+    padding: 0 10px;
 }
 
 .capivara-actions button {

@@ -36,9 +36,9 @@ function displayCapivaras(capivaras) {
                 <span><strong>Peso:</strong> ${capivara.peso} kg</span>
                 <span><strong>Status de Saúde:</strong> ${capivara.saude}</span>
                 <span><strong>Habitat:</strong> ${capivara.habitat}</span>
-                <span><strong>Comportamento:</strong> ${capivara.comportamento}</span>
-                ${capivara.dieta ? `<span><strong>Dieta:</strong> ${capivara.dieta}</span>` : ''}
-                ${capivara.observacoes ? `<span><strong>Observações:</strong> ${capivara.observacoes}</span>` : ''}
+                <strong>Comportamento:</strong> ${capivara.comportamento}
+                ${capivara.dieta ? `<strong>Dieta:</strong> ${capivara.dieta}` : ''}
+                ${capivara.observacoes ? `<strong>Observações:</strong> ${capivara.observacoes}` : ''}
                     <div class="capivara-actions">
                         <button class="delete-btn" onclick="deleteCapivara(${capivara.id})"><span class="material-symbols-outlined">delete_forever</span></button>
                     </div>
