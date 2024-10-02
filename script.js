@@ -7,9 +7,6 @@ const addBtn = document.getElementById('add-btn');
 const cancelBtn = document.querySelector('.close-button');
 const addCapivaraForm = document.getElementById('add-capivara-form');
 
-
-
-
 async function fetchCapivaras() {
     try {
         const response = await fetch(API_URL);
@@ -47,7 +44,6 @@ function displayCapivaras(capivaras) {
                     </div>
             </div>
         `;
-
         capivaraList.appendChild(capivaraItem);
     });
 }
