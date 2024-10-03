@@ -4,7 +4,7 @@ Este projeto é a interface de frontend para a aplicação de gerenciamento de c
 ## 🔗 Link para o Deploy: 
 * Veja a versão ao vivo do projeto aqui:<a href="https://drs-zoo-capivaras.netlify.app/"> Cadastro de Usuários </a>
 
-![tela lilinda salgados](https://github.com/DeyvissonRobert/zoo-capivaras-frontend/blob/main/assets/Finalizado.jpg)
+![tela lilinda salgados](https://github.com/DeyvissonRobert/zoo-capivaras-frontend/blob/main/assets/Zoo%20Capivaras.png)
 
 ## Tecnologias Utilizadas
 * HTML
