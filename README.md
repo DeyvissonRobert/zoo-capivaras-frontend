@@ -2,7 +2,7 @@
 Este projeto é a interface de frontend para a aplicação de gerenciamento de capivaras. Ele permite cadastrar novas capivaras e listar as capivaras existentes através de uma interface web. Este projeto se conecta a uma API RESTful construída com Node.js e MySQL.
 
 ## 🔗 Link para o Deploy: 
-* Veja a versão ao vivo do projeto aqui:<a href="https://drs-zoo-capivaras.netlify.app/"> Cadastro de Usuários </a>
+* Veja a versão ao vivo do projeto aqui:<a href="https://drs-zoo-capivaras.netlify.app/"> Gestão de Capivaras </a>
 
 ![tela lilinda salgados](https://github.com/DeyvissonRobert/zoo-capivaras-frontend/blob/main/assets/Zoo%20Capivaras.png)
 
